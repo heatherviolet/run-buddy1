@@ -15,6 +15,14 @@ header {
   flex-wrap: wrap;
   padding: 20px 35px;
   background-color: #39a6b2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }/* Applies 20px to every side (top, right, bottom, left) */
 header {
   padding: 20px;
@@ -41,11 +49,13 @@ header {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 10px rgba (0, 0, 0, 0.5);
   }
 
   header nav ul {
@@ -56,6 +66,13 @@ header {
 
   header nav ul li a {
     font-size: 20px;
+    text-shadow: 0 0 10px rgba (0, 0, 0, 0.5);
+  }
+  header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
   }
 
   footer h2, footer div {
@@ -121,6 +138,9 @@ header {
   }
   .hero-form button {
     width: 100%;
+  }
+  .hero-form button:hover {
+    background-color: #39a6b2;  
   }
 
   .section-title {
@@ -198,6 +218,8 @@ footer a {
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -209,11 +231,14 @@ footer a {
   padding: 20px;
   width: 500px;
   color: #024e76;
-  position: absolute;
+  position: unset;
   bottom: 120px;
   right: 140px;
   width 40%;
   margin: 3.5%
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: rgba(252, 225, 56, 0.8);
+  border-radius: 15px;
 }
 .hero-form h3 {
   font-size: 24px;
@@ -230,6 +255,13 @@ footer a {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(225,225,225, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(225,225,225, 1);
+  outline: none;
 }
 .hero-form label; {
   margin: 0 5px;
@@ -240,6 +272,10 @@ footer a {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
+}
+.hero-form button:hover {
+  background-color: #39a6b2;  
 }
 .hero-cta {
   width: 35%
@@ -253,6 +289,7 @@ footer a {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba (0, 0, 0, 0.5);
 }
 
 .intro p {
@@ -314,13 +351,18 @@ footer a {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
+.step:last-child(even) {
+  border-bottom: 1px solid #39a6b2;
+  }
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
+  }
 .step-info {
   flex: 2 70%;
   display: flex;
@@ -446,6 +488,10 @@ footer a {
   font-size: 16pxcolor: #024e76;
   width: 100%;
   margin-bottom: 15pxmargin-top: 5px;
+  border-radius: 10px;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+
 }
 
 .contact-form button {
@@ -456,6 +502,12 @@ footer a {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 /* REACH OUT STYLES END */
 
